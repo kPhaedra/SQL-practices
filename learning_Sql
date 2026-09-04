@@ -1,0 +1,77 @@
+-- 1//SELECT : mean show me *: eveerything  FROM... : inside...
+SELECT * FROM Client ;
+
+-- 2//TOP 4 : like 1 to 4 not everything;
+SELECT TOP 5 * FROM CatalogueProduit ;
+
+-- 3//For seeing only country that is pays here
+SELECT Pays  FROM Client ;
+SELECT ClientType , ClientNom  FROM Client ;-- do not put a star for this one 
+
+-- 4//ASC : from the smallest to the tallest one 
+SELECT TOP 5 * FROM Client 
+ORDER BY ClientNom  ASC;
+
+-- 5//now COUNT() : calculate like adding after you will give a name to that column
+SELECT COUNT(*) AS totalClients 
+FROM Client ;
+
+/* 
+1// result for the firt one just knowing what is SELECT
+
+CLIENT_1	La fabrique 	TPE	France
+CLIENT_2	Mobilier SAS 	PME	France
+CLIENT_3	Mobilia 	Grand compte	Italie
+CLIENT_4	Piazza Nobile 	PME	Italie
+CLIENT_5	Möbel 	PME	Allemagne
+CLIENT_6	Der Stoff 	TPE	Allemagne
+CLIENT_7	Muebles 	Grand compte	Espagne
+CLIENT_8	A fábrica 	PME	Portugal
+CLIENT_9	Epipla 	TPE	Grêce
+
+
+2// I was learning how to use - TOP-
+
+PROD_1	Bureau	25	2022-01-01
+PROD_2	Chaise	5	2022-01-01
+PROD_3	Fauteuil	50	2022-01-01
+PROD_4	Lit	200	2022-01-01
+PROD_5	Table	45	2022-01-01
+
+
+3// I was learning how to seeing what contains one or two columns 
+
+France
+France
+Italie
+Italie
+Allemagne
+Allemagne
+Espagne
+Portugal
+Grêce
+
+TPE	La fabrique 
+PME	Mobilier SAS 
+Grand compte	Mobilia 
+PME	Piazza Nobile 
+PME	Möbel 
+TPE	Der Stoff 
+Grand compte	Muebles 
+PME	A fábrica 
+TPE	Epipla 
+
+4//
+ I was learning how to use - ASC-
+CLIENT_8	A fábrica 	PME	Portugal
+CLIENT_6	Der Stoff 	TPE	Allemagne
+CLIENT_9	Epipla 	TPE	Grêce
+CLIENT_1	La fabrique 	TPE	France
+CLIENT_5	Möbel 	PME	Allemagne
+
+
+5// I was learning how to use - count- for knowing the total of clients:
+
+9
+
+*/
