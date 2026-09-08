@@ -1,0 +1,52 @@
+-- file 02: Filtering Data with WHERE
+SELECT TABLE_NAME 
+FROM INFORMATION_SCHEMA.TABLES 
+WHERE TABLE_TYPE = 'BASE TABLE';
+
+/* RESULT 
+CatalogueProduit
+Client
+PointDeVente*/
+
+-- Challenge 1: Find all clients located in 'France'
+-- we are supposed to start with select 
+SELECT *
+FROM Client 
+WHERE Pays = 'France';
+
+
+/* RESULT 
+CLIENT_1	La fabrique 	TPE	France
+CLIENT_2	Mobilier SAS 	PME	France
+*/
+
+
+
+-- Challenge 2: Find all products in CatalogueProduit with a price greater than 20
+SELECT *
+FROM CatalogueProduit 
+WHERE PoidsKg   > 20;
+
+
+/* RESULT 
+PROD_1	Bureau	25	2022-01-01
+PROD_3	Fauteuil	50	2022-01-01
+PROD_4	Lit	200	2022-01-01
+PROD_5	Table	45	2022-01-01
+*/
+
+
+-- Challenge 3: Find all clients whose name starts with the letter 'M'
+SELECT *
+FROM Client 
+WHERE ClientNom LIKE 'M%';
+
+
+/* RESULT 
+CLIENT_2	Mobilier SAS 	PME	France
+CLIENT_3	Mobilia 	Grand compte	Italie
+CLIENT_5	Möbel 	PME	Allemagne
+CLIENT_7	Muebles 	Grand compte	Espagne
+*/
+
+ 
