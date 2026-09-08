@@ -1,5 +1,6 @@
 # SQL-practices
 File 1: Learning basic SELECT, TOP, ORDER BY, and COUNT using SQL Server
+file 2 :Filtering Data with WHERE
 
 # My Daily SQL Learning Journey
 
